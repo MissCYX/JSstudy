@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>今天天气不错</title>
+  <script>
+    //作用：Date对象是js中用于表示日期/时间的对象
+    //内部提供了许多的方法用于对时间进行显示
+    
+    //1 创建方式
+    //默认表示当前时间:
+    //var date = new Date();
+    //console.log(date);
+    
+    //传入参数可以表示具体的某一个时间
+    //var date = new Date("2015-1-1 1:1:1");
+    //console.log(date);
+    
+    //如果传入的参数是数值类型，月份从0开始
+    //var date = new Date(2013,10,11,8,8,8);
+    //console.log(date);
+    
+    //2 转换方法(了解)
+    //转换方法是将当前时间转换为毫秒形式
+    //1秒 - 1000毫秒
+    //当前设置的日期到1970-1-1的时间转换为毫秒后的值
+    //var date = new Date();
+    //console.log(date.valueOf());
+    //console.log(date.getTime());
+    //console.log(Date.parse("2013-1-1"));
+    //console.log(Date.now());
+    
+    
+    //3 其他方法：用于获取日期对象中的某个部分
+    var date = new Date();
+    //获取年:
+    //console.log(date.getFullYear());
+    //获取月:  月份是从0开始的
+    //console.log(date.getMonth());
+    //获取日:
+    //console.log(date.getDate());
+    
+    //获取小时:
+    //console.log(date.getHours());
+    //获取分钟:
+    //console.log(date.getMinutes());
+    //获取秒:
+    //console.log(date.getSeconds());
+    //获取毫秒: 范围0-999
+    //console.log(date.getMilliseconds());
+    
+    //练习：
+    //获取当前时间，打印出以下形式的字符串  "2014年1月1日 12时11分11秒888毫秒"
+    var date = new Date();
+    console.log(date.getFullYear() + "年" + (date.getMonth() + 1) + "月" + date.getDate() + "日 " + date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds() + "." + date.getMilliseconds());
+  
+  
+  </script>
+</head>
+<body>
+
+
+</body>
+</html>

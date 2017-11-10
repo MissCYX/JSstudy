@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>今天天气不错</title>
+  <script>
+    //indexOf()
+    //用于查找数组中指定元素值的索引
+    //参数1 要检测的元素的值  参数2(可选) 检测的起始位置索引值，默认值为0
+    var arr = ["a", "c", "b", "c", "a", "d", "a", "c", "a", "b", "c"];
+    //console.log(arr.indexOf("c",0));
+    //console.log(arr.indexOf("c",3));
+    
+    //我们发现，indexOf无法一次找到所有出现位置的索引值
+    //练习：获取出数组arr中所有"a"的索引值
+    //1 创建一个数组用于保存索引值
+    var indexArr = [];
+    
+    //2 先获取第一次
+    //var index = arr.indexOf("a",0);
+    //
+    ////indexArr[indexArr.length] = index;//旧的方式
+    //indexArr.push(index);//新的方式
+    var index = -1;//可以将第一次的取值也合并到while循环中，-1是为了保证第一次检索从0开始
+    
+    //3 再获取一次
+    //index = arr.indexOf("a",index + 1);
+    //indexArr.push(index);
+    
+    //由于"a"出现的次数不定，可以使用过while循环
+    //4 只有还存在新的"a"时，才进行继续查找，否则结束
+    //如果使用indexOf方法没有找到对应的值，会返回-1
+    while (arr.indexOf("a", index + 1) != -1) {
+      index = arr.indexOf("a", index + 1);
+      indexArr.push(index);
+    }
+    console.log(indexArr);
+    
+    
+    //lastIndexOf()
+    //console.log(arr.lastIndexOf("c"));
+  
+  
+  </script>
+</head>
+<body>
+
+
+</body>
+</html>

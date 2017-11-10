@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>今天天气不错</title>
+  <script>
+    //三元运算符(三目运算符)
+    //1 作用：用于对简单的if..else的结构进行化简。
+    //2 语法结构：条件表达式?式子1:式子2;
+    
+    //检测是否成年
+    //var age = 9;
+    //age >= 18 ? alert("可以看电影") : alert("可以看动画片");
+    
+    //从两个数中找最大值
+    //var num1 = 20, num2 = 34;
+    //num1>num2?alert(num1):alert(num2);
+    
+    //3 返回值的使用
+    //如果语法结构中的式子1或者式子2是表达式，执行某个式子后，会将表达式的返回值作为三元的返回值使用。
+    
+    //从两个数中找最大值
+    //var num1 = 20, num2 = 34;
+    //var result = num1 > num2 ? num1 : num2;
+    //console.log(result);
+    
+    //从3个数中找到最大值并且取出
+    var num1 = 20, num2 = 34, num3 = 120;
+    //1 先计算出前两个数的最大值
+    var max = num1 > num2 ? num1 : num2;
+    //2 使用max跟num3比較
+    var result = max > num3 ? max : num3;
+    console.log(result);
+    
+    //书写的化简（不是必要的步骤）
+    var num1 = 20, num2 = 34, num3 = 120;
+    //1 使用max跟num3比較
+    var result = (num1 > num2 ? num1 : num2) > num3 ? (num1 > num2 ? num1 : num2) : num3;
+    console.log(result);
+  
+  </script>
+</head>
+<body>
+
+
+</body>
+</html>

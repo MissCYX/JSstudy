@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>今天天气不错</title>
+  <script>
+    var arr = ["a", "b", "c", "d", "e"];
+    //数组arr中最后一个元素的索引值为4
+    //通过arr[5]可以给数组arr设置一个新的元素
+    //数组的长度为5
+    
+    
+    var arr3 = ["a", "b", "c"];
+    //数组arr3最后一个元素的索引值为2
+    //arr3[3]可以给数组arr3设置一个新的元素
+    //数组的长度为3
+    
+    //结论：
+    //观察后发现，数组最后一个元素的索引值可以使用  arr[arr.length - 1]进行表示
+    //给数组添加新的元素时，可以使用arr.length作为索引值使用  arr[arr.length] = "新的值";
+    
+    var arr4 = ["a"];
+    arr4[arr4.length] = "b";
+    arr4[arr4.length] = "c";
+    arr4[arr4.length] = "d";
+    arr4[arr4.length] = "e";
+    arr4[arr4.length] = "f";
+    arr4[arr4.length] = "g";
+    arr4[arr4.length] = "h";
+    console.log(arr4);
+  
+  
+  </script>
+</head>
+<body>
+
+
+</body>
+</html>

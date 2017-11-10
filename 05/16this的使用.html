@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>今天天气不错</title>
+  <script>
+    //this的使用方式
+    //1 使用场景：正常情况下，需要在方法中使用才有意义
+    //2 作用：指向函数调用者(指向当前方法属于的那个对象)
+    
+    //构造函数中的this指向为特殊的使用方式，原因是new将this的指向修改了。
+    
+    //var zhangSan = new Object();
+    //zhangSan.name = "张三";
+    //zhangSan.sayHi = sayHi;
+    //var liSi = new Object();
+    //liSi.name = "李四";
+    //liSi.sayHi = sayHi;
+    //
+    //function sayHi() {
+    //  console.log("你好，我是" + this.name);
+    //}
+    //
+    //zhangSan.sayHi();
+    //liSi.sayHi();
+    //
+    ////如果在一个普通的函数中使用了this，会指向js的顶级对象window
+    //sayHi();
+    
+    
+    //以下代码中的两中this的用法不同，需要进行区分
+    function Create() {
+      this.name = "张三";
+      this.sayHi = function () {
+        console.log("你好，我是" + this.name);
+      }
+    }
+    var obj = new Create();
+    obj.sayHi();
+    
+    
+    var obj3 = new Create();
+    obj3.sayHi();
+  
+  
+  </script>
+</head>
+<body>
+
+
+</body>
+</html>

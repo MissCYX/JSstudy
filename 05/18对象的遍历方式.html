@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>今天天气不错</title>
+  <script>
+    //数组的遍历：使用for循环对所有元素进行操作的一种方式。
+    //对象的遍历：使用for循环对所有的属性和方法进行操作的方式。
+    
+    //数组是一种有序的数据存储形式。
+    //对象是一种无序的数据存储形式。
+
+    //使用for..in循环对对象进行遍历操作
+    var duiXiang = {
+      name: "张三",
+      age: 18,
+      gender: "男",
+      sayHi: function () {
+        console.log("我是张三");
+      }
+    };
+
+    //以下代码为对象属性的两种访问方式：
+    //console.log(duiXiang.name);
+    //console.log(duiXiang["name"]);
+
+    //k相当于循环变量
+    //obj表示需要进行遍历的对象
+    for(var k in duiXiang){
+      //k - 属性名 - 字符串类型
+      //duiXiang[k] - 属性值
+      console.log(k);
+      console.log(duiXiang[k]);
+  
+    }
+    
+    
+    
+    
+    
+  </script>
+</head>
+<body>
+
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>今天天气不错</title>
+  <script>
+    var arr = [1, 2, 3];
+    //console.log(typeof arr);//"object"
+    
+    //检测数组的新方式：
+    //1 Array.isArray(数据);  //数据为数组，返回true，否则返回false
+    //ie9以下不支持此方法
+    //console.log(Array.isArray(arr));
+    //console.log(Array.isArray("abc"));
+    
+    //2 instanceof 操作符   instance 实例 - 实际的例子
+    //数据 instanceof Array  如果数据是数组，返回true，否则返回false
+    //console.log(arr instanceof Array);
+    //console.log("abcd" instanceof Array);
+    
+    //3  Object.prototype.toString.call(数据)
+    //返回数据的类型  "[object Xxxxx]"
+    //console.log(Object.prototype.toString.call(arr));//"[object Array]"
+    //console.log(Object.prototype.toString.call("abc"));//"[object String]"
+    //console.log(Object.prototype.toString.call(null));//"[object Null]"
+  
+  </script>
+</head>
+<body>
+
+
+</body>
+</html>

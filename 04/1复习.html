@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>今天天气不错</title>
+  <script>
+    //数组
+    //1 创建方式
+    //构造函数创建方式
+    //var arr = new Array("a","b","c");
+    //字面量创建方式
+    //var arr = ["a","b","c"];
+    
+    //用于保存多个数据
+    
+    //2 长度
+    //length属性，用于表示数组中元素的个数，数值类型
+    //length的相关操作
+    
+    //3 索引的使用
+    //用于对数组中的指定元素进行操作
+    //arr[索引值]
+    //arr["索引值"]
+    
+    //4 长度和索引的关系
+    //最后一个元素的索引值 arr[arr.length-1]
+    //新项  arr[arr.length]
+    
+    //5 遍历方式
+    //使用for循环对数组操作的方式
+    //var arr = ["a", "b", "c", "d"];
+    //for (var i = 0; i < arr.length; i++) {
+    //  console.log(arr[i]);
+    //}
+    
+    //for (var i = arr.length-1; i >= 0; i--) {
+    //  console.log(arr[i]);
+    //}
+    
+    
+    //break
+    //1 在switch中使用，可以结束switch语句
+    //2 在循环中使用，可以结束循环语句
+    
+    //    var count = 0;
+    //    for (var i = 0; i < 10; i++) {
+    //      count++;
+    //
+    //      if (i == 7) {
+    //        break;
+    //      }
+    //
+    //    }
+    
+    //var num = 0,count=0;
+    //while (num < 10) {
+    //  count++;
+    //  if(num==7){
+    //    break;
+    //  }
+    //  num++;
+    //}
+    //console.log(count);
+    
+    
+    //翻转数组
+    //    var arr = ["a", "b", "c", "d"];
+    //    //在原数组的基础上进行翻转操作
+    //    //    for (var i = 0; i < parseInt(arr.length / 2); i++) {
+    //    for (var i = 0; i <= arr.length / 2 - 1; i++) {
+    //      //arr[0]    arr[arr.length - 1]
+    //      //arr[1]    arr[arr.length - 2]
+    //      //arr[2]    arr[arr.length - 3]
+    //      //arr[i]    arr[arr.length - i - 1]
+    //
+    //      var temp = arr[i];
+    //      arr[i] = arr[arr.length - 1 - i];
+    //      arr[arr.length - 1 - i] = temp;
+    //
+    //    }
+    //    console.log(arr);
+    
+    
+    //冒泡排序的基本规律：
+    //比較轮数  arr.length - 1
+    //每一轮的比較次数
+    //1 i的初始值为0  次数为arr.length - 1 - i
+    //2 i的初始值为1  次数为arr.length - i
+    
+    //    var arr = [6, 5, 4, 3, 2, 1];
+    //    //外层循环控制比較的轮数
+    //    for (var i = 0; i < arr.length - 1; i++) {
+    //      //内层循环控制每一轮中比較的次数
+    //      for (var j = 0; j < arr.length - 1 - i; j++) {
+    //        //比較大小
+    //        if (arr[j] > arr[j + 1]) {
+    //          var temp = arr[j];
+    //          arr[j] = arr[j + 1];
+    //          arr[j + 1] = temp;
+    //        }
+    //      }
+    //    }
+    //    console.log(arr);
+    
+    
+    //使用计数的方式进行优化：
+    //使用计数的方式记录某一轮循环中，发生交换的次数(if执行的次数)
+    var arr = [6, 5, 4, 3, 2, 1];
+    var count;
+    //外层循环控制比較的轮数
+    for (var i = 0; i < arr.length - 1; i++) {
+      count = 0;
+      //内层循环控制每一轮中比較的次数
+      for (var j = 0; j < arr.length - 1 - i; j++) {
+        //比較大小
+        if (arr[j] > arr[j + 1]) {
+          var temp = arr[j];
+          arr[j] = arr[j + 1];
+          arr[j + 1] = temp;
+          count++;
+        }
+      }
+      
+      //判断，如果count的值为0，说明没有发生交换，意味着已经排序完毕了，结束即可
+      if (count == 0) {
+        break;
+      }
+    }
+    console.log(arr);
+  
+  </script>
+</head>
+<body>
+
+
+</body>
+</html>

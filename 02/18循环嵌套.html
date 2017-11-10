@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>今天天气不错</title>
+  <script>
+    //循环嵌套：将多个循环嵌套在一起使用的结构
+    //注意点:多个循环变量的命名不要相同
+    //    for (var i = 0; i < 4; i++) {
+    //      //这个循环执行4次
+    //
+    //      for (var j = 0; j < 3; j++) {
+    //        //内循环单独可以执行3次，放在外循环中可以执行3*4次（12次）
+    //        //内部的循环执行次数：外循环的执行次数 * 内循环单独执行的次数
+    //        console.log("我能执行多少次？");
+    //      }
+    //
+    //    }
+    
+    
+    //在页面中打印一段内容
+    //document.write("我是文字");
+    //如果设置的内容为标签形式，会生成与body的内部
+    //document.write("<div></div>");
+    
+    
+    //在页面中使用*的组合，打印出正方形
+    //通过观察，我们发现。每一行的代码是相同的，并且需要创建5次
+    //    for (var i = 0; i < 5; i++) {
+    //      document.write("* ");
+    //      document.write("* ");
+    //      document.write("* ");
+    //      document.write("* ");
+    //      document.write("* ");
+    //      document.write("<br>");
+    //    }
+    
+    //再观察，发现，每个星星的打印代码也是相同的，并且需要5次
+    for (var i = 0; i <10; i++) {
+      //再次书写一个循环执行5次
+      for (var j = 0; j <10; j++) {
+        document.write("* ");
+      }
+      document.write("<br>");
+    }
+  
+  
+  </script>
+</head>
+<body>
+
+
+</body>
+</html>

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>今天天气不错</title>
+  <script>
+    //1 声明方式:
+    //函数声明语句  function 函数名(){}
+    //函数表达式  var fun = function(){};
+    
+    //2 预解析：
+    //变量提升，函数提升
+    
+    //3 函数的数据类型  "function"
+    
+    //4 匿名函数
+    //4.1 作用函数表达式： var fun = function(){}
+    //4.2 自调用函数： (function(){  })();
+    //4.3 作为参数使用（回调函数）：
+    //     当一个函数整体功能一定，但是内部的某些子功能不确定时，可以使用回调函数
+    
+    //    function fun(gongNeng) {
+    //      //传参过程分析：
+    //      //gongNeng = function () {
+    //      //  console.log("这是功能3的代码，也有20行");
+    //      //}
+    //      console.log("此处具有500行代码");
+    //      gongNeng();
+    //    }
+    //    //希望最后执行功能1
+    //    fun(gongNeng1);
+    //
+    //    //希望最后执行功能2
+    //    fun(function () {
+    //      console.log("此处需要执行功能2，有20行代码");
+    //    });
+    //    //希望最后执行功能3
+    //    fun(function () {
+    //      console.log("这是功能3的代码，也有20行");
+    //    });
+    //    function gongNeng1() {
+    //      console.log("此处需要执行功能1，有20行代码");
+    //    }
+    //    function gongNeng2() {
+    //      console.log("此处需要执行功能2，有20行代码");
+    //    }
+    
+    //对象：
+    //抽象和具体的关系
+    
+    //1 对象的创建方式
+    var obj = new Object();
+    
+    //2 属性和方法
+    obj.name = "张三";
+    obj.age = 18;
+    obj.sayHi = function () {
+      console.log("你好，我是张三");
+    };
+    
+    //3 对象属性访问的第二种方式
+    //使用场景，当我们使用的属性名为字符串类型时，必须使用中括号的访问方式
+    //console.log(obj["name"]);
+    //var str = "age";
+    //console.log(obj[str]);
+    
+    //了解即可，我们不使用这种写法：
+    //属性名也可以为数值类型，目的是给数组使用的。
+    //obj[10] = "a";
+    //console.log(obj);
+    //var arr = new Array();
+    //console.log(arr.length);
+    //arr.push()
+    
+    
+    //4 使用函数进行对象的创建
+    //function createHua(name) {
+    //  var hua = new Object();
+    //  hua.name = name;
+    //  hua.zhanShi = function () {
+    //    console.log("大家都说好看");
+    //  }
+    //  return hua;
+    //}
+    //var muDan = createHua("牡丹");
+    
+    
+    //5 使用构造函数进行对象的创建
+    //5.1 命名首字母大写
+    //5.2 调用前必须加new
+    //5.3 在构造函数中只需要使用this给创建出来的对象添加属性和方法即可
+    
+    //    function Create(name) {
+    //      this.name = name;
+    //      this.sayHi = function () {
+    //        console.log("你好，我是" + this.name);
+    //      }
+    //    }
+    //var zhangSan = new Create("张三");
+    //zhangSan.sayHi();
+    
+    //new的作用：
+    //1 创建对象
+    //2 返回对象
+    //3 将构造函数内的this指向更改为步骤1创建的对象
+    
+    
+    //6 this的使用
+    //this在方法中使用才有意义、
+    //在普通函数中使用，指向window，没有意义，不要这样使用。
+    //作用：指向函数调用者(指向这个函数属于的那个对象)
+    //var obj = new Object();
+    //obj.sayHi = function () {
+    //  console.log(this);
+    //};
+    //obj.sayHi();
+    
+    //7 遍历方式
+    //for(var k in obj){
+    //  //k - 属性名 - 字符串类型
+    //  //obj[k] - 属性值
+    //  console.log(obj[k]);
+    //}
+    
+    
+    //8 对象字面量
+    //var obj = {
+    //  name: "张三",
+    //  age: 18
+    //};
+    
+    //9 JSON 数据传输格式
+    //跟对象字面量几乎相同，只不过属性名必须加双引号.
+    
+    
+    //已有数组["a","b","b","d","a","e","c","b","a","d","d","b","a","c","e"],
+    //需求：1 取出数组中出现过的字符（不重复,例如 a b d c e）
+    //     2 统计每个字符出现的次数。
+    
+    var arr = ["a", "b", "b", "d", "a", "e", "c", "b", "a", "d", "d", "b", "a", "c", "e", "d", "e"];
+    //1 对数组进行去重操作，取出数组中出现过的字符
+    var resultArr = [arr[0]];
+    var flag;
+    for (var i = 1; i < arr.length; i++) {
+      //假设当前arr[i]可以放入
+      flag = true;
+      
+      for (var j = 0; j < resultArr.length; j++) {
+        //判断，如果resultArr中具有了arr[i]的值，说明假设不成立
+        if (resultArr[j] == arr[i]) {
+          flag = false;
+          break;
+        }
+      }
+      
+      //验证结果
+      if (flag) {
+        resultArr[resultArr.length] = arr[i];
+      }
+    }
+    console.log(resultArr);
+    
+    //2 需要统计resultArr中每个字符的出现次数
+    var countArr = [];
+    var count;
+    //2.1 取出resultArr中的每个字符，回到arr中进行比較计数
+    for (i = 0; i < resultArr.length; i++) {
+      //针对每个resultArr中的项，重置计数为0
+      count = 0;
+      for (var j = 0; j < arr.length; j++) {
+        if (arr[j] == resultArr[i]) {
+          count++;
+        }
+      }
+      //将当前resultArr[i]的计数放入到countArr中即可
+      countArr[countArr.length] = count;
+    }
+    console.log(countArr);
+  
+  
+  </script>
+</head>
+<body>
+
+
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>今天天气不错</title>
+  <script>
+    //function fun() {
+    //}
+    //
+    ////标准的创建方式:
+    //var obj = new Object();
+    //console.log(obj);
+    //
+    ////我们自己书写的函数
+    //var f1 = new fun();
+    //console.log(f1);
+    
+    //通过对比我们发现，函数调用前，写new与不写是两种不同的结果
+    //说明了new 帮我们做了2件事，创建对象与返回对象
+    
+    //以后再书写函数创建对象时，就不需要在函数内进行对象的创建和返回了，只需要在调用前加new即可
+    
+    function CreateHua(color, hasCi) {
+      //new的第三个作用，将函数内的this指向了创建的对象
+      //只需要给this设置属性方法即可
+      this.color = color;
+      this.hasCi = hasCi;
+      this.kaiHua = function () {
+        console.log("我开花了，很好看");
+      }
+    }
+    //使用createHua函数创建一个对象并传参设置属性值
+    var muDan = new CreateHua("红色", false);
+    console.log(muDan);//访问属性
+    muDan.kaiHua();//调用方法
+    
+    //new的作用：
+    //1 创建对象
+    //2 返回对象
+    //3 将函数内的this指向创建的对象
+    
+    //使用new创建对象的这种函数使用方式称为构造函数形式
+    //构造函数的作用，用于进行对象的创建
+    //书写时的注意点:
+    //1 构造函数的首字母大写
+    //2 调用前加new
+    //3 构造函数内只需要通过this添加属性方法即可
+  
+  
+  </script>
+</head>
+<body>
+
+
+</body>
+</html>

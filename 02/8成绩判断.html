@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>今天天气不错</title>
+  <script>
+    
+    //需求：根据考试的成绩，判断是 优(100-90) 良(80-90) 及格(60-80) 不及格(0-60)哪个等级
+    //    var chengJi = 67;
+    //分析：具4种情况，需要使用if elseif
+    
+    //基本的实现方式：按照每个成绩的区间，分别设置条件
+    //    if (chengJi >= 90 && chengJi <= 100) {
+    //      alert("成绩优秀");
+    //    } else if (chengJi >= 80 && chengJi < 90) {
+    //      alert("成绩良");
+    //    } else if (chengJi >= 60 && chengJi < 80) {
+    //      alert("成绩及格");
+    //    } else {
+    //      alert("成绩不及格");
+    //    }
+    
+    
+    //优化后的实现方式：
+    //优(100-90) 良(80-90) 及格(60-80) 不及格(0-60)
+    //    var chengJi = 95;
+    
+    //1 考虑到规则以外的值，进行过滤
+    // 值大于100或值小于0，均不符合规则
+    if (chengJi > 100 || chengJi < 0) {
+      alert("请检测成绩的值，不合法");
+    } else if (chengJi >= 90) {
+      //由于if的条件已经将大于100和小于0的值过滤掉了，到这个位置判断时，只能是1-100之间的值
+      alert("成绩优秀");
+    } else if (chengJi >= 80) {
+      alert("成绩良");
+    } else if (chengJi >= 60) {
+      alert("成绩及格");
+    } else {
+      alert("成绩不及格");
+    }
+    
+    
+    //扩展的方式：
+    //优(100-90) 良(80-90) 及格(60-80) 不及格(0-60)
+    //    var chengJi = 95;
+    //    if (chengJi > 100 || chengJi < 0) {
+    //      alert("不合法");
+    //    } else if (chengJi >= 80) {
+    //      //意味着成绩可能为优秀或者良，按照90划分
+    //      if (chengJi >= 90) {
+    //        alert("优秀");
+    //      } else {
+    //        alert("良");
+    //      }
+    //    } else {
+    //      //意味着成绩可能为及格或者不及格，按照60划分
+    //      if (chengJi >= 60) {
+    //        alert("及格");
+    //      } else {
+    //        alert("不及格");
+    //      }
+    //    }
+  
+  
+  </script>
+</head>
+<body>
+
+
+</body>
+</html>

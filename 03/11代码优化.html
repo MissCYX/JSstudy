@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>今天天气不错</title>
+  <script>
+    var arr = [1, 2, 3, 5, 4];
+    //5个数比較4轮
+    //第一轮：  [1,2,3,4,5];
+    //观察发现，对于现在这个数组，可以只需要比較一轮就排序完毕了
+    //需要在排序的过程中进行判断，如果某一轮执行时发现已经排序完毕，直接结束即可
+    
+    
+    //1 外层循环
+    for (var i = 1; i < arr.length; i++) {
+      //----用于记录，本轮中，发生交换的次数
+      var count = 0;
+      //2 内层循环
+      for (var j = 0; j < arr.length - i; j++) {
+        //3 比較
+        //----如果在某轮比較中。发现交换的次数为0，说明排序完毕了
+        if (arr[j] > arr[j + 1]) {
+          var temp = arr[j];
+          arr[j] = arr[j + 1];
+          arr[j + 1] = temp;
+          //----进入到if中说明发生了交换，设置count++
+          count++;
+        }
+      }
+      
+      //----当本轮中所有次的比較完毕后，判断
+      //如果count依然为0，说明排序完毕，将循环结束即可
+      if (count == 0) {
+        break;//跳出循环（结束当前循环的执行）
+      }
+  
+      
+      
+      
+    }
+    console.log(arr);
+  </script>
+</head>
+<body>
+
+
+</body>
+</html>

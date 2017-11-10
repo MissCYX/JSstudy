@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>今天天气不错</title>
+  <script>
+    
+    function getSum(num1, num2) {
+      var sum = 0;
+      for (var i = num1; i <= num2; i++) {
+        sum += i;
+      }
+      return sum;
+    }
+    
+    console.log(getSum(1, 10));
+    console.log(getSum(1, 10) + 50);
+    
+    //计算1-50所有数的和
+    var result1 = getSum(1, 50);
+    //console.log(result1);
+    //计算12-36所有数的和
+    var result2 = getSum(12, 36);
+    
+    
+    //将上面的两个结果进行求和计算
+    console.log(result1 + result2);
+    
+    
+    //问题：想要让两个结果进行求和，需要先取得计算的结果
+    //但是我们发现，函数内声明的变量在函数外无法访问(报错)
+    
+    //函数返回值：
+    //设置方式：在函数内，代码的最后位置书写    return 值;
+    //接收方式：函数的调用表达式本身就代表了返回值。
+    
+    //return的第二个作用：跳出函数执行(结束函数执行)
+    
+    
+    //function fun() {
+    //  console.log(1);
+    //  return;
+    //  console.log(2);
+    //  console.log(3);
+    //}
+    //fun();//只有1被打印出来了。
+  
+  
+  </script>
+</head>
+<body>
+
+
+</body>
+</html>

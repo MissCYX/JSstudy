@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>今天天气不错</title>
+  <script>
+    //计算n-m之间所有整数的和
+    //1 当我们拿到一个不具体的需求时，先将需求具体话 (10-36之间所有数的和) 将具体功能实现
+    //var sum = 0;
+    //for (var i = 10; i <= 36; i++) {
+    //  sum += i;
+    //}
+    //console.log(sum);
+    
+    //2 书写一个函数体，将功能放入
+    //    function getSum() {
+    //      var sum = 0;
+    //      for (var i = 10; i <= 36; i++) {
+    //        sum += i;
+    //      }
+    //      console.log(sum);
+    //    }
+    //3 将刚才设置的具体需求值进行修改(20-57之间所有数的和)
+    //找到需要变化的值，将需要更改的位置，设置为形参即可
+    //function getSum(num1,num2) {
+    //  var sum = 0;
+    //  for (var i = num1; i <= num2; i++) {
+    //    sum += i;
+    //  }
+    //  console.log(sum);
+    //}
+    
+    //4 哪里需要哪里调
+    //getSum(10,20);
+    //getSum(20,36);
+    
+    
+    //练习：  Math.PI
+    //计算任意半径圆的面积 Math.PI * 半径 * 半径
+    //1 将需求具体化 假设半径为5
+    //var r = 5;
+    //var mianJi = Math.PI * r * r;
+    //console.log(mianJi);
+    
+    //2 使用函数封装
+    function getMJ() {
+      var r = 5;
+      var mianJi = Math.PI * r * r;
+      console.log(mianJi);
+    }
+    
+    //3 更改具体需求，找到参数的位置
+    function getMJ(r) {
+      var mianJi = Math.PI * r * r;
+      console.log(mianJi);
+    }
+    
+    //4 哪里需要哪里调
+    //getMJ(1);
+    //getMJ(2);
+
+
+    //计算任意半径圆的周长 2 * Math.PI * 半径
+    
+    
+  
+  
+  </script>
+</head>
+<body>
+
+
+</body>
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>今天天气不错</title>
+  <script>
+    //ctrl + d 复制一行代码并且生成到下一行
+    //ctrl + alt + l 格式化代码
+    //ctrl + f 搜索
+    //ctrl + r 替换
+    //shift + enter 在下一行开启新行
+    
+    //ctrl + 方向键 可以按词跳跃
+    //shift + 方向键 可以选中字符
+    //ctrl + shift + 方向键 可以按词选中
+    
+    //console.log("abcdef" + true * 26478273821);
+    
+    
+    //if练习：
+    //判断一个年份是闰年还是平年 ：
+    //      闰年：能被4整除，但不能被100整除的年份 或者 能被400整除的年份
+    //1 设置一个年份
+    //var year = 2004;
+    ////2 设置判断条件
+    //if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0) {
+    //  alert("是闰年");
+    //}else{
+    //  alert("是平年");
+    //}
+    
+    
+    //判断一个人的年龄是否满18岁(是否成年)
+    
+    //while练习：
+    //要求用户输入用户名和密码，并进行验证，如果不是admin和888888则要求再次输入。
+    
+    //    //1 获取用户输入的用户名和密码
+    //    var userName = prompt("请输入用户名");
+    //    var password = prompt("请输入密码");
+    //
+    //    //基本判断的方式：
+    //    //    if(userName != "admin" || password != "888888"){
+    //    //      //不满足，再次检测
+    //    //      if(userName != "admin" || password != "888888"){
+    //    //        //不满足，再次检测
+    //    //      }
+    //    //    }
+    //    //上面的代码实现了基本的判断功能，但是不合理，因为用户输入错误的次数不可控
+    //    while (userName != "admin" || password != "888888") {
+    //      //让用户进行重新输入
+    //      userName = prompt("请输入用户名");
+    //      password = prompt("请输入密码");
+    //    }
+    
+    // 代码结构分析：
+    //    //1 获取用户输入的用户名和密码
+    //    var userName,passWord;
+    //    userName = prompt("请输入用户名");
+    //    passWord = prompt("请输入密码");
+    //    //2 判断
+    //    while (userName != "admin" || passWord != "888888") {
+    //      //让用户进行重新输入
+    //      userName = prompt("请输入用户名");
+    //      passWord = prompt("请输入密码");
+    //    }
+    //通过观察，我们发现第一次输入内容的获取与while循环内的代码是相同的，可以合并
+    
+    //合并结果
+    //    //1 获取用户输入的用户名和密码
+    //    var userName, passWord;
+    //    //2 判断
+    //    while (userName != "admin" || passWord != "888888") {
+    //      //让用户进行重新输入
+    //      userName = prompt("请输入用户名");
+    //      passWord = prompt("请输入密码");
+    //    }
+    //功能是没有问题的，但是第一次的while判断是没有意义的
+    //需要先进行取值，然后再判断，考虑使用do..while的结构
+    ////1 获取用户输入的用户名和密码
+    //var userName, passWord;
+    ////2 判断
+    //do {
+    //  //让用户进行重新输入
+    //  userName = prompt("请输入用户名");
+    //  passWord = prompt("请输入密码");
+    //} while (userName != "admin" || passWord != "888888");
+    
+    
+    //for循环练习：
+    //同时求1-100之间所有偶数和奇数的和
+    //    //1 声明两个变量用于保存结果
+    //    var evenSum = 0, oddSum = 0;
+    //    //2 获取1-100所有数
+    //    for (var i = 1; i <= 100; i++) {
+    //      //3 判断奇数还是偶数
+    //      if (i % 2 == 0) {
+    //        //4 计算偶数和
+    //        evenSum += i;
+    //      } else {
+    //        //5 计算奇数和
+    //        oddSum += i;
+    //      }
+    //    }
+    //    console.log(evenSum, oddSum);
+    
+    
+    //打印直角三角形
+    //1 设置第一个循环，用于打印多行
+    //    for (var i = 1; i < 11; i++) {
+    //      //2 每行中打印多个星星
+    //      //需要的每行的星星个数递增，让内部循环的条件值递增即可
+    //      for (var j = 0; j < i; j++) {
+    //        document.write("* ");
+    //      }
+    //      //3 换行
+    //      document.write("<br>");
+    //    }
+    
+    
+    //本金10000元存入银行，年利率是千分之三，每过1年，将本金和利息相加作为新的本金。计算5年后，获得的本金是多少？
+    //    //1 声明变量用于保存钱
+    //    var money = 10000;
+    //
+    //    //2 计算一年后的本金
+    //    //money = money * 0.003 + money;
+    //
+    //    //3 发现每年的本金计算方式是相同了，要计算5年，设置循环执行5次即可
+    //    for (var i = 0; i < 5; i++) {
+    //      money = money * 0.003 + money;
+    //      money *= 1.003;//化简步骤（可选）
+    //    }
+    //
+    //    console.log(money);
+  
+  
+  </script>
+
+
+</head>
+<body>
+
+
+</body>
+</html>

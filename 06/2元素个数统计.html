@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>今天天气不错</title>
+  <script>
+    //相当于货车，里面有许多的货物
+    var arr = ["a", "b", "b", "d", "a", "e", "c", "b", "a", "d", "d", "b", "a", "c", "e", "d", "e"];
+    //相当于货物单，用于记录货物以及个数
+    var obj = new Object();
+    var num;//使用num来保存某一个属性值
+    
+    //送货的小哥将货物一个一个的放到仓库中
+    for (var i = 0; i < arr.length; i++) {
+      //num = obj[arr[i]];//可以使用变量替代的方式，帮助思考
+      
+      //每次拿过一个货物时，我需要检查，货物单上是否有这个货物
+      //查看 obj[arr[i]] 的值，两种情况，情况1有值，为一个大于等于1的数值  情况2，属性没有值，值为undefined
+      if (obj[arr[i]]) {
+        //说明已经有了这个货物（obj中已经存在了当前属性）
+        //意味着不是第一次出现，设置计数增加即可
+        obj[arr[i]]++;
+        
+      } else {
+        //说明obj中还没有这个属性,说明是第一次出现，设置值为1即可
+        obj[arr[i]] = 1;
+      }
+    }
+    console.log(obj);
+  
+  
+  </script>
+</head>
+<body>
+
+
+</body>
+</html>

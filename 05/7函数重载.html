@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>今天天气不错</title>
+  <script>
+    //js中没有函数重载
+    
+    //想要对函数的重载进行模拟，只需要在函数内对用户传入的实参个数进行检测即可
+    //每个函数中都内置一个arguments数组结构数据，但不是数组
+    //我们将这种类似数组的结构称为伪数组(类数组)
+    
+    function fun() {
+//      console.log(arguments);
+      //arguments.push(1);//使用arguments调用了一个数组的方法，发现报错，说明arguments不是真正的数组
+      
+      //操作用户当前传入的所有实参。
+      //for (var i = 0; i < arguments.length; i++) {
+      //  console.log(arguments[i]);
+      //}
+      
+      //arguments作为了解内容
+      
+      //模拟函数重载：
+      if (arguments.length == 2) {
+        console.log("实现2个参数的功能");
+      } else if (arguments.length == 3) {
+        console.log("实现3个参数的功能");
+      }
+    }
+    
+    //    fun(1, 2, 3, 4, 5, 6, 7,100);
+    fun(1, 2);
+    fun(1, 2, 3);
+  
+  
+  </script>
+</head>
+<body>
+
+
+</body>
+</html>

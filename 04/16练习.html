@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>今天天气不错</title>
+  <script>
+    //计算任意两个数的大小，返回大的值。
+    function getMax2(num1, num2) {
+      //var max = num1 > num2?num1:num2;
+      //return max;
+      //化简后的代码：
+      return num1 > num2 ? num1 : num2;
+    }
+    
+    //计算任意3个数的大小，返回最大值。
+    function getMax3(n1, n2, n3) {
+      //1 计算前两个数的最大值
+      var max = getMax2(n1, n2);
+      //2 使用max跟n3计算最大值
+      return getMax2(max, n3);
+    }
+    
+    console.log(getMax3(101, 20, 30));
+  
+  
+  </script>
+</head>
+<body>
+
+
+</body>
+</html>

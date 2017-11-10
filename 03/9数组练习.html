@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>今天天气不错</title>
+  <script>
+    //求一组数中的所有数的和还有平均值
+    //var arr = [6, 5, 3, 7, 8, 9, 1, 3, 65, 3, 32, 1];
+    //
+    ////1 声明一个变量用于保存结果
+    //var sum = 0;
+    ////2 遍历数组arr，获取所有元素的值
+    //for (var i = 0; i < arr.length; i++) {
+    //  //3 求和
+    //  sum += arr[i];
+    //}
+    ////4 计算平均值
+    //console.log(sum);
+    //console.log(sum / arr.length);
+    
+    
+    ////将1-100之间所有的整数放入到数组中
+    ////1 创建一个数组
+    //var arr = [];
+    ////2 获取1-100之间的所有数
+    //for (var i = 1; i <= 100; i++) {
+    //  //3 将i放入到数组arr中即可
+    //  //arr[i - 1] = i;//针对此题目的特殊计算方式
+    //  arr[arr.length] = i;//通用方式
+    //}
+    //console.log(arr);
+    
+    
+    //将1-100之间可以被3整除的数放入到数组中
+    //1 获取1-100所有数
+    //    var arr = [];
+    //    for (var i = 1; i <= 100; i++) {
+    //      //2 找到可以被3整除的数
+    //      if(i % 3 == 0){
+    //        arr[arr.length] = i;
+    //      }
+    //    }
+    //    console.log(arr);
+    
+    
+    //求一组数中的最大值
+    ////1 创建一个数组，保存一组数据
+    //var arr = [6, 4, 7, 4, 2, 1, 4, 7, 9, 11, 3];
+    //
+    ////2 可以按照顺序，使用前一个值跟后一个比較，取出最大值后再继续向后比較即可
+    //var max = arr[0];
+    //
+    ////3 获取数组中的所有元素，与max进行依次比較
+    //for (var i = 1; i < arr.length; i++) {
+    //  //4 使用arr[i]与max进行比較
+    //  //如果数组当前项比max还大，更新max的值
+    //  if (arr[i] > max) {
+    //    max = arr[i];
+    //  }
+    //}
+    //console.log(max);
+    
+    
+    //求一组数中的最小值，以及所在位置(取出最小值的索引值)
+    ////1 创建一个数组保存一些数据
+    //var arr = [6, 4, 1, 7, 3, 5, 8, 2, 9, 22];
+    ////2 设置变量保存最小值
+    //var min = arr[0];
+    //var minIndex = 0;//minIndex记录的是最小值的索引值，需要与min的值同步
+    ////3 遍历数组，与min进行比較
+    //for (var i = 0; i < arr.length; i++) {
+    //  //4 比較大小
+    //  if (arr[i] < min) {
+    //    min = arr[i];
+    //    minIndex = i;//当min发生更改时，minIndex应当同步更改
+    //  }
+    //}
+    //console.log(min, minIndex);
+    
+    
+    //将字符串数组用|或其他符号分割
+    //var arr = ["张三", "李四", "王五", "赵六"];//期望的结果形式"张三|李四|王五|赵六"
+    ////1 设置一个变量用于保存结果
+    //var result = arr[0];
+    //var fenGeFu = "-";//用于保存分隔的符号，方便后期修改
+    ////2 遍历数组
+    //for (var i = 1; i < arr.length; i++) {
+    //  result += fenGeFu + arr[i];//对数组元素进行拼接操作
+    //}
+    //console.log(result);
+    
+    
+    //要求将数组中不为0的值存入一个新的数组，生成新的数组
+    //var arr = [1, 6, 0, 4, 2, 0, 7, 8, 0, 9, 3, 0, 5, 1, 2];
+    ////1 创建一个新的数组用于保存筛选后的结果
+    //var resultArr = [];
+    ////2 遍历
+    //for (var i = 0; i < arr.length; i++) {
+    //  //3 判断如果当前项arr[i]不是0，保存到resultArr中即可
+    //  if (arr[i] != 0) {
+    //    //4 放入到resultArr
+    //    resultArr[resultArr.length] = arr[i];
+    //  }
+    //}
+    //console.log(resultArr);
+    
+    
+    //翻转数组
+    //var arr = ["a", "b", "c", "d"];
+    //方式1：在一个新的数组中，添加为翻转后的数据，原数组不修改
+    //var resultArr = [];
+    //可以先使用最原始的方式，一句一句完成需求
+    //resultArr[resultArr.length] = arr[3];
+    //resultArr[resultArr.length] = arr[2];
+    //resultArr[resultArr.length] = arr[1];
+    //resultArr[resultArr.length] = arr[0];
+    
+    //完成后观察代码，找规律进行化简
+    //可以使用反向遍历的方式对代码进行化简
+    //for (var i = arr.length - 1; i >= 0; i--) {
+    //  resultArr[resultArr.length] = arr[i];
+    //}
+    //console.log(resultArr);
+    
+    
+    //方式2：在原数组的基础上进行修改
+    //var arr = ["a", "b", "c", "d", "e"];
+    //var count = 0;//用于记录当前循环执行的次数
+    //
+    ////1 遍历数组arr，将数组arr的首尾数据进行交换
+    //for (var i = 0; i <= arr.length / 2 - 1; i++) {
+    //  //注意，遍历时不要遍历所有的元素，只需要遍历前半部分即可，否则交换后又换回来了
+    //  //设置循环条件时，需要考虑元素的个数为奇数的情况，此时中间的一个元素是不需要交换的
+    //  //设置条件时，可以使用 i < parseInt(arr.length / 2) 或者 使用i <= arr.length / 2 - 1;
+    //  //arr[0]   arr[arr.length - 1]
+    //  //arr[1]   arr[arr.length - 2]
+    //  //arr[2]   arr[arr.length - 3]
+    //  //arr[i]   arr[arr.length - i - 1];
+    //
+    //  //交换两个位置的值：
+    //  var temp = arr[i];
+    //  arr[i] = arr[arr.length - 1 - i];
+    //  arr[arr.length - 1 - i] = temp;
+    //
+    //  count++;//循环执行，设置计数增加
+    //}
+    //console.log(arr, count);
+    
+    
+    
+  
+  </script>
+</head>
+<body>
+
+
+</body>
+</html>

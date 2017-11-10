@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>今天天气不错</title>
+  <script>
+    //对象
+    
+    //1 抽象和具体的关系
+    //生活中经常会使用抽象的词语来描述一些事物，这样做的好处是什么？
+    //好处，可以给事物进行一些大体的描述
+    
+    //具体：将一个抽象的描述内容中的每个特征值具体下来
+    
+    //对象是用于描述具体事物的一种方式。
+    
+    //2 特征和行为(属性和方法)
+    //每一个事物都具有一些特征，同样也会具有一些行为
+    //特征是一种静态的描述方式，行为是一种动态的描述方式
+    
+    //js中将特征称为属性，将行为称为方法。
+    
+    
+    //3 对象的创建方式
+    //3.1 构造函数创建方式：
+    var banChe = new Object();
+    
+    //4 给对象添加属性和方法
+    banChe.color = "暗金黄色";
+    banChe.lunCount = 8;
+    banChe.name = "黑马程序员";
+    
+    //注意：方法中保存的值为函数，表示动态的行为描述。
+    banChe.drive = function () {
+      console.log("上下班接送员工");
+    };
+    
+    banChe.biaoChe = function () {
+      console.log("我在秋名山等你");
+    };
+    
+    //寻找身边的对象，并使用代码对其进行描述。
+    
+    //方法其实也是属性，只不过内部保存的值为函数，所以起了一个特殊的名字用于区分。
+    console.log(banChe.name);
+    banChe.biaoChe();
+
+
+  </script>
+</head>
+<body>
+
+
+</body>
+</html>

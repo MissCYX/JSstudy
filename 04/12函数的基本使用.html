@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>今天天气不错</title>
+  <script>
+    //1 声明方式:
+    //  函数声明语句
+    //  function 函数名(){
+    //    //函数体代码
+    //  }
+    
+    //  function fun() {
+    //    console.log("hi，我是一个函数");
+    //  }
+    
+    //2 调用方式：
+    //函数自己不会执行，如果需要执行，要使用调用表达式。
+    //函数名();
+    //fun();
+    
+    //将一天中需要做的事情封装为一个函数
+    function myDay() {
+      console.log("早上起床");
+      console.log("洗漱，上厕所");
+      console.log("吃早饭");
+      console.log("去公司上课");
+      console.log("抽烟，上厕所");
+      console.log("中午吃饭，午休");
+      console.log("下午上课");
+      console.log("抽烟，上厕所");
+      console.log("回家吃饭");
+      console.log("陪女盆友看看电视剧");
+      console.log("洗洗睡了");
+      console.log("。。。。。。。。。。。。。。。。。");
+    }
+    
+    //myDay();
+    //myDay();
+    ////可以在任意的多次调用之间书写一些其他的代码，灵活性强
+    //console.log("在家躺了一天，什么也没干");
+    //myDay();
+    //myDay();
+    
+    
+    //小练习:完成计算1-100的和的功能，并将其封装在一个函数中，进行多次调用
+    //1 根据需求完成具体的功能
+    //    var sum = 0;
+    //    for (var i = 1; i <= 100; i++) {
+    //      sum += i;
+    //    }
+    //    console.log(sum);
+    
+    //2 书写一个函数体，将功能放入进去
+    function getSum() {
+      var sum = 0;
+      for (var i = 1; i <= 100; i++) {
+        sum += i;
+      }
+      console.log(sum);
+    }
+    
+    //3 哪里需要哪里调
+    getSum();
+    getSum();
+    getSum();
+  
+  
+  </script>
+</head>
+<body>
+
+
+</body>
+</html>

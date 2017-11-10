@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>今天天气不错</title>
+  <script>
+    //    //使用对象来描述一个牡丹花
+    //    //1 创建对象
+    //    var muDan = new Object();
+    //    //2 添加属性和方法
+    //    muDan.name = "牡丹";
+    //    muDan.color = "red";
+    //    muDan.hasCi = false;
+    //    muDan.hasXiangWei = true;
+    //
+    //    muDan.kaiHua = function () {
+    //      console.log("每逢xxx月份");
+    //      console.log("牡丹花都会竞相开放");
+    //    };
+    //
+    //
+    //    //使用对象来描述一个玫瑰花
+    //    //1 创建对象
+    //    var rose = new Object();
+    //    //2 添加属性和方法
+    //    muDan.name = "玫瑰";
+    //    muDan.color = "yellow";
+    //    muDan.hasCi = true;
+    //    muDan.hasXiangWei = true;
+    //
+    //    muDan.kaiHua = function () {
+    //      console.log("一年四季都开，可以送给心爱的人");
+    //    };
+    
+    //通过观察，我们发现花的对象创建代码结构是重复的，可以使用函数的形式进行创建
+    
+    
+    function createHua(name, color, hasCi, hasXiangWei) {
+      //使用对象来描述一个玫瑰花
+      //1 创建对象
+      var muDan = new Object();
+      //2 添加属性和方法
+      muDan.name = name;
+      muDan.color = color;
+      muDan.hasCi = hasCi;
+      muDan.hasXiangWei = hasXiangWei;
+      
+      muDan.kaiHua = function () {
+        console.log("一年四季都开，可以送给心爱的人");
+      };
+      
+      //3 设置返回值
+      return muDan;
+    }
+    
+    //使用函数创建对象，可以使对象的创建操作变简单
+    var muDan = createHua("牡丹", "红色", false, true);
+    var rose = createHua("玫瑰", "黄色", true, true);
+    //得到两个对象，两个对象中的属性值为不同的值
+    console.log(muDan);
+    console.log(rose);
+  
+  
+  </script>
+</head>
+<body>
+
+
+</body>
+</html>

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>今天天气不错</title>
+  <script>
+    ////数组去重
+    //var arr = [1, 1, 2, 2, 3, 3];
+    //var resultArr = [arr[0]];
+    
+    //计数法：
+    //var count;
+    ////1 计数
+    //for (var i = 0; i < arr.length; i++) {
+    //  count = 0;//针对每一个arr[i]
+    //  for (var j = 0; j < resultArr.length; j++) {
+    //    if (arr[i] == resultArr[j]) {
+    //      count++;
+    //    }
+    //  }
+    //  if (count == 0) {
+    //    resultArr[resultArr.length] = arr[i];
+    //  }
+    //}
+    
+    //假设成立法：
+    //1 找到不确定的点，设置假设条件
+    //2 找到失败的条件
+    //3 根据最终结果设置操作
+    //var flag;
+    //for (var i = 0; i < arr.length; i++) {
+    //  flag = true;
+    //  for (var j = 0; j < resultArr.length; j++) {
+    //    if (arr[i] == resultArr[j]) {
+    //      flag = false;
+    //      break;
+    //    }
+    //  }
+    //  if (flag) {
+    //    resultArr[resultArr.length] = arr[i];
+    //  }
+    //}
+    
+    //利用循环特性：
+    //for (var i = 0; i < arr.length; i++) {
+    //  for (var j = 0; j < resultArr.length; j++) {
+    //    if(arr[i] == resultArr[j]){
+    //      break;
+    //    }
+    //  }
+    //  if(j == resultArr.length){
+    //    resultArr[resultArr.length] = arr[i];
+    //  }
+    //}
+    
+    
+    //数组的类型检测
+    //Array.isArray(数据) 返回布尔值   ie9以下不支持
+    //数据 instanceof Array 返回布尔值
+    //Object.prototype.toString.call(数据) 返回类型 "[object Xxxxxx]"
+    
+    //基本数据类型和复杂数据类型区别：
+    //1 保存的数据个数不同
+    //2 在内存中保存方式不同
+    // 基本数据类型值在内存单元中保存的是具体值，复杂数据类型在内存单元中保存的是具体值的指针
+    
+    //3 复制后结果不同
+    // 基本数据类型复制前后两个值无关，复杂数据类型复制前后两个值实际上是同一数据
+    
+    
+    //函数：
+    //1 函数的作用：重用，提高代码利用率，增强灵活性
+    //2 函数的声明：  函数声明语句
+    //function 函数名() {
+    //   函数体
+    //}
+    
+    //3 函数的执行方式：调用后执行   函数名();
+    //4 函数的参数
+    //  4.1 使用场景：当函数的整体功能一定，但是内部的某些值不确定时，可以使用参数。
+    //  4.2 分类：形参  实参
+    
+    //5 返回值：
+    //  由于函数内声明的变量在函数外无法访问，需要使用返回值的形式
+    //  return 值;
+    //  接收方式：使用函数的调用表达式接收。
+    
+    
+    //6 作用域：全局作用域 局部作用域
+    //7 全局变量和局部变量
+    
+    //8 不规范的变量使用形式以及作用域链的访问规则
+    //num = 200;
+    //var n1 = n2 = n3 = 3;
+    
+    
+    //function fun1() {
+    //  function fun2() {
+    //  //      console.log(num);
+    //  //      console.log(num + 3);
+    //    num = 200;
+    //  }
+    //
+    //  fun2();
+    //}
+    //fun1();
+    //console.log(num);
+    
+    
+    //1 分析计算两个数最大值和计算三个数最大值的函数执行过程，使用文字描述。
+    
+    //2 求阶乘 与 求1到n之间所有数的阶乘的和
+    //-1 将需求具体化，求3的阶乘
+    //    var ji = 1;
+    //    for (var i = 1; i <= 3; i++) {
+    //      ji *= i;
+    //    }
+    //    console.log(ji);
+    //-2 封装在函数中
+    //function getJC() {
+    //  var ji = 1;
+    //  for (var i = 1; i <= 3; i++) {
+    //    ji *= i;
+    //  }
+    //  console.log(ji);
+    //}
+    
+    //    //-3 更改需求，观察需要修改的位置，设置参数
+    //    function getJC(n) {
+    //      var ji = 1;
+    //      for (var i = 1; i <= n; i++) {
+    //        ji *= i;
+    //      }
+    //      return ji;
+    //    }
+    //    //-4 调用
+    //    getJC(3);
+    //
+    //
+    //    //-5 计算1-n之间所有数的阶乘的和
+    //    function getSumOfJC(n) {
+    //      var sum = 0;
+    //      for (var i = 1; i <= n; i++) {
+    //        sum += getJC(i);
+    //      }
+    //      return sum;
+    //    }
+    
+    
+    //3 求一组数中的最大值
+    //    function getMaxOfArr(arr) {
+    //      var max = arr[0];
+    //      for (var i = 1; i < arr.length; i++) {
+    //        if (arr[i] > max) {
+    //          max = arr[i];
+    //        }
+    //      }
+    //      return max;
+    //    }
+    //    console.log(getMaxOfArr([10, 20, 3, 6, 74]));
+    
+    
+    //4 对数组排序，从小到大
+    //略。
+    
+    
+    //5 判断一个数是否是质数
+    //质数：一个数只能被1和自身整除，就是质数
+    
+//    var num = 23;
+//    var count = 0;
+//    for (var i = 2; i < num; i++) {
+//      //记录可以整数的值的个数
+//      if (num % i == 0) {
+//        count++;
+//      }
+//    }
+//    if (count == 0) {
+//      alert("是质数");
+//    } else {
+//      alert("不是质数");
+//    }
+    
+    
+//    var num = 63;
+//    var flag = true;
+//    for (var i = 2; i < num; i++) {
+//      if(num % i == 0){
+//        flag = false;
+//        break;
+//      }
+//    }
+//    if(flag){
+//      alert("质数");
+//    }else{
+//      alert("不是质数");
+//    }
+  
+//    var num = 273;
+//    for (var i = 2; i < num; i++) {
+//      if(num % i == 0){
+//        break;
+//      }
+//    }
+//    if(i == num){
+//      alert("是质数");
+//    }else{
+//      alert("不是质数");
+//    }
+  
+  </script>
+</head>
+<body>
+
+
+</body>
+</html>

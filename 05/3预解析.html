@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>今天天气不错</title>
+  <script>
+    //预解析
+    //以前我们说程序的执行是从上往下一行一行执行的，不准确，为了方便理解
+    //实际上程序真正执行之前还存在一个步骤称为预解析：
+    //1 查找当前作用域中的var变量声明，将变量的声明提升到当前作用域顶端(变量提升),赋值保留在原地
+    //2 查找当前作用域中的function函数声明语句，将函数体整体提升到当前作用域顶端,调用保留在原地
+    //3 以上两步不分先后
+    
+    //预解析在每个作用域开启前均会发生
+
+    var num;
+    //---------------------
+//    console.log(num);
+//    num = 100;
+
+    fun();
+    function fun() {
+      console.log("我是一个函数");
+    }
+    fun();
+
+    
+    //局部作用域中也会发生预解析
+    function fun1() {
+      var num3;
+      //----------------
+      console.log(num3);
+      num3 = 100;
+    }
+    fun1();
+    
+
+  </script>
+</head>
+<body>
+
+
+</body>
+</html>

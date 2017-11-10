@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>今天天气不错</title>
+  <script>
+    //1 计数法
+    
+    //    //使用一个变量对特定需求进行计数（最简单）
+    //    var arr = [6, 5, 4, 3, 2, 1];
+    //    var count;
+    //    //外层循环控制比較的轮数
+    //    for (var i = 0; i < arr.length - 1; i++) {
+    //      count = 0;
+    //      //内层循环控制每一轮中比較的次数
+    //      for (var j = 0; j < arr.length - 1 - i; j++) {
+    //        //比較大小
+    //        if (arr[j] > arr[j + 1]) {
+    //          var temp = arr[j];
+    //          arr[j] = arr[j + 1];
+    //          arr[j + 1] = temp;
+    //          count++;
+    //        }
+    //      }
+    //
+    //      //判断，如果count的值为0，说明没有发生交换，意味着已经排序完毕了，结束即可
+    //      if (count == 0) {
+    //        break;
+    //      }
+    //    }
+    //    console.log(arr);
+    
+    
+    //    //2 假设成立法
+    //    //当我们发现，需要做的操作什么时候执行不确定，可以使用假设成立法
+    //    //-1 找到不确定的执行位置，设置假设条件
+    //    //-2 对假设的条件进行验证（找到可以使假设失败的情况）
+    //    //-3 验证完毕后，根据最终得到的假设结果设置操作即可
+    //    var arr = [1, 2, 3, 5, 4];
+    //    var count = 0;//记录比較的轮数，验证优化的效果
+    //    for (var i = 0; i < arr.length - 1; i++) {//外层循环控制比較的轮数
+    //      count++;
+    //      //1 哪一轮代码执行后可以进行跳出操作不确定，设置假设条件
+    //      var flag = true;//假设成立
+    //      for (var j = 0; j < arr.length - 1 - i; j++) {//内层循环控制每一轮中比較的次数
+    //        if (arr[j] > arr[j + 1]) {//比較大小
+    //          var temp = arr[j];
+    //          arr[j] = arr[j + 1];
+    //          arr[j + 1] = temp;
+    //          //2 找到了失败的条件，更改假设条件为false
+    //          flag = false;
+    //        }
+    //      }
+    //      //3 验证flag的值，设置操作
+    //      if (flag == true) {
+    //        break;
+    //      }
+    //    }
+    //    console.log(arr, count);
+    
+    
+    //3 利用循环的特性
+    //    for (var i = 0; i < 7; i++) {
+    //    }
+    //    console.log(i);//7
+    
+    //var arr = [3,3,3,3,3,3,3];
+    //for (var i = 0; i < arr.length; i++) {
+    //}
+    //console.log(i);//arr.length
+    
+    //一会儿讲数组去重时再演示这种方式。
+    
+    
+    //三种方式在使用的过程中如何选择：选择从可以使用的方式中随意选取即可。
+  </script>
+</head>
+<body>
+
+
+</body>
+</html>

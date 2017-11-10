@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>今天天气不错</title>
+  <script>
+    //js中的函数参数传递采用值传递的方式（复制）
+    //传参时，会将实参的值复制给形参。
+    
+    //如果传入的参数为基本数据类型，实参和形参不会相互影响
+    //var num = 100;
+    //function fun(n) {
+    //  //相当于做了n = num;
+    //  n++;
+    //  console.log(n,"n的值");
+    //}
+    //fun(num);
+    //console.log(num,"num的值");
+    
+    
+    //当传入的参数值为复杂数据类型时，实参和形参其实就是同一个数据，你变我也变
+    //var arr = [1,2,3];
+    //function fun(arrIn) {
+    //  //相当于 arrIn = arr;
+    //  arrIn[0] = 200;
+    //  console.log(arrIn,"arrIn的值");
+    //}
+    //fun(arr);
+    //console.log(arr,"arr的值");
+    
+    
+    var arrOut = [4, 7, 3, 6, 2, 5, 1];
+    function sorted(arr) {
+      //arr = arrOut
+      for (var i = 0; i < arr.length - 1; i++) {
+        for (var j = 0; j < arr.length - 1 - i; j++) {
+          if (arr[j] > arr[j + 1]) {
+            var temp = arr[j];
+            arr[j] = arr[j + 1];
+            arr[j + 1] = temp;
+          }
+        }
+      }
+    }
+    sorted(arrOut);
+    //由于排序功能是直接修改了形参的内部值，外面的实参也会相应改变，所以不需要设置返回值了。
+    console.log(arrOut);
+    
+    //如果传入的参数为复杂数据类型，并且在函数的功能中直接修改了形参，不需要设置返回值
+    //但是如果结果不是传入的数组，而是另外一个值，还是需要设置返回值的。
+
+
+  </script>
+</head>
+<body>
+
+
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>今天天气不错</title>
+  <script>
+    function myDay(food, fun) {
+      //food = "包子";
+      //fun = function () {
+      //  console.log("陪女盆友看看电视剧");
+      //  console.log("洗洗睡了");
+      //  console.log("。。。。。。。。。。。。。。。。。");
+      //}
+      
+      console.log("早上起床");
+      console.log("洗漱，上厕所");
+      console.log("吃早饭" + food);
+      console.log("去公司上课");
+      console.log("抽烟，上厕所");
+      console.log("中午吃饭，午休");
+      console.log("下午上课");
+      console.log("抽烟，上厕所");
+      console.log("回家吃饭");
+      
+      //晚上要做的事情是不同的，我们将不同的事情保存在多个函数中，
+      //并通过不同函数执行完成，但是要执行的函数不确定，可以通过参数的形式进行传递
+      //注意，传入时应当传入函数体。
+      //这种将一个函数作为另一个函数参数的使用方式称为回调函数。
+      
+      //使用场景：当一个函数整体功能一定，但是内部的某些子功能不确定时，使用函数参数(回调函数)
+      fun();
+    }
+    
+    myDay("馒头", fun1);
+    myDay("烙饼", fun2);
+    myDay("包子", fun3);
+    
+    
+    function fun1() {
+      console.log("陪女盆友看看电视剧");
+      console.log("洗洗睡了");
+      console.log("。。。。。。。。。。。。。。。。。");
+    }
+    
+    function fun2() {
+      console.log("今天晚上领导让我加班，大家一起开个会");
+      console.log("吃会议餐");
+      console.log("12点滚回家");
+      console.log("跪一会儿键盘");
+      console.log("睡觉");
+    }
+    function fun3() {
+      console.log("今天是七夕，跟女盆友出去嗨皮");
+      console.log("看电影，吃烛光晚餐");
+      console.log("晚上到速8宾馆门口买了根冰棍");
+      console.log("回家睡觉");
+    }
+  
+  
+  </script>
+</head>
+<body>
+
+
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>今天天气不错</title>
+  <style>
+    table {
+      border-collapse: collapse;
+      /*border: 1px solid #000;*/
+      
+    }
+  </style>
+  <script>
+    //while
+    //计算用于输入的数值的位数
+    //1 获取用户输入
+    //var num = parseInt(prompt("请输入数值"));
+    
+    
+    //2 判断用户输入数值的位数
+    //-1234/10    123.4
+    //-123/10    12.3
+    //-12/10    1.2
+    //-1/10    -0.1
+    
+    //    //如果输入的数值为0.需要进行单独判断
+    //    if(num == 0){
+    //      console.log("一位数");
+    //    }else{
+    //      //由于生活中使用的数值都是以10为进制单位的，利用对数值的/10操作来判断数值的位数
+    //
+    //      //声明一个变量用于记录/10的次数，其实就是记录循环执行的次数
+    //      var count = 0;
+    //      while (num >= 1 || num <= -1) {
+    //        //使用数据/10
+    //        num = num / 10;
+    //
+    //        //设置计数++
+    //        count++;
+    //      }
+    //
+    //      console.log(count);
+    //    }
+    
+    //上面需要单独判断的原因是，0无法通过while的条件，可以使用do..while的形式进行简化
+    //    var count = 0;
+    //    do {
+    //      //使用数据/10
+    //      num = num / 10;
+    //      //设置计数++
+    //      count++;
+    //    } while (num >= 1 || num <= -1);
+    //
+    //    console.log(count);
+    
+    
+    //倒着打印用户输入的数值
+    //    //1 获取用户的输入内容
+    //    var num = prompt("请输入数值");
+    //    var str = "";
+    //
+    //    //2 可以使用%的方式取出数值的最后一位
+    //    do{
+    //      str += Math.abs(parseInt(num % 10));
+    //      //为了下一次可以取得新的位的值，需要进行/10操作
+    //      num = num / 10;
+    //    }while (num >= 1 || num <= -1);
+    //    console.log(str);
+    
+    // Math.abs(数值)   取得数值的绝对值
+    
+    
+    //for
+    //在页面中打印9*9乘法表
+    
+    
+    //document.write("<table border=1 style='border-collapse:collapse;'><thead></thead><tbody>");
+    ////1 外层循环控制每一行参与计算的数值
+    //for (var i = 1; i <= 9; i++) {
+    //  document.write("<tr>");
+    //  //2 内层循环控制每行需要乘的数值 1-i
+    //  for (var j = 1; j <= i; j++) {
+    //    //3 拼接要显示的内容
+    //    document.write("<td>"+i + "*" + j + "=" + i * j + "</td>")
+    //  }
+    //
+    //  document.write("</tr>");
+    //
+    //}
+    //document.write("</tbody></table>");
+    
+    
+    //观察以下数列规律 1，1，2，3，5，8，13，21... 计算出数列中第12项的值
+    //规律为，除前两项为1以外，后面的每个数值是前两个数值的和
+    //1 声明两个变量保存最前面两个数
+    var num1 = 1, num2 = 1;
+    var sum = 0;
+    
+    //    //2 计算第三个数
+    //    sum = num1 + num2;
+    //    //2.1 为了下次计算方便，先将num1和num2的值更新
+    //    num1 = num2;
+    //    num2 = sum;
+    //
+    //    //3 计算第四个数
+    //    sum = num1 + num2;
+    //    num1 = num2;
+    //    num2 = sum;
+    
+    //循环需要执行的次数为n-2（需要的值的位置数-2）
+    for (var i = 0; i < 10; i++) {
+      sum = num1 + num2;
+      num1 = num2;
+      num2 = sum;
+    }
+    console.log(sum);
+
+
+  </script>
+</head>
+<body>
+
+
+</body>
+</html>
